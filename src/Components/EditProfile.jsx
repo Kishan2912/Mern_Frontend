@@ -11,7 +11,7 @@ const EditProfile = () => {
 
 
 	async function GetProfile() {
-		const req = await fetch('http://localhost:1337/api/profile', {
+		const req = await fetch('http://43.205.191.63:1337/api/profile', {
 			headers: {
 				'x-access-token': localStorage.getItem('token'),
 			},
@@ -44,7 +44,7 @@ const EditProfile = () => {
 
 		console.log(tempName)
 
-		const req = await fetch('http://localhost:1337/api/profile', {
+		const req = await fetch('http://43.205.191.63:1337/api/profile', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',

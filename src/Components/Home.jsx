@@ -10,7 +10,7 @@ const Home = () => {
 
             <Header />
             <div className='home'>
-                <h1 className="home-header">Authenticatoin System</h1>
+                <h1 className="home-header">Authentication System</h1>
             </div>
         </div>
         </>
