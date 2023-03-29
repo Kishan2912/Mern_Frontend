@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import "./Css/login.css"
+import "./login.css"
 
 function Login() {
 	const [email, setEmail] = useState('')
@@ -10,7 +10,7 @@ function Login() {
 	async function loginUser(event) {
 		event.preventDefault()
 
-		const response = await fetch('http://43.205.191.63/api/login', {
+		const response = await fetch(`http://${process.env.REACT_APP_PORT}/api/login`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',

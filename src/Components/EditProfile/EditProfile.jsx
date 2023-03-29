@@ -1,17 +1,15 @@
-import React, { useEffect, useState ,} from 'react'
+import React, { useEffect, useState, } from 'react'
 import jwtDecode from 'jwt-decode'
-
 import { useNavigate } from 'react-router-dom'
-import "./Css/editProfile.css"
+import "./editProfile.css"
 
 const EditProfile = () => {
 	const navigate = useNavigate()
 	const [tempName, setTempName] = useState('')
 	const [tempEmail, setTempEmail] = useState('')
 
-
 	async function GetProfile() {
-		const req = await fetch('http://43.205.191.63/api/profile', {
+		const req = await fetch(`http://${process.env.REACT_APP_PORT}/api/profile`, {
 			headers: {
 				'x-access-token': localStorage.getItem('token'),
 			},
@@ -37,6 +35,9 @@ const EditProfile = () => {
 				GetProfile()
 			}
 		}
+		else {
+			navigate('/login', { replace: true })
+		}
 	}, [])
 
 	async function updateProfile(event) {
@@ -44,7 +45,7 @@ const EditProfile = () => {
 
 		console.log(tempName)
 
-		const req = await fetch('http://43.205.191.63/api/profile', {
+		const req = await fetch(`http://${process.env.REACT_APP_PORT}/api/profile`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
@@ -75,7 +76,7 @@ const EditProfile = () => {
 					// onChange={(e) => setTempEmail(e.target.value)}
 					className="edit-profile-input email_input"
 					readOnly
-				/>	
+				/>
 				<input
 					type="text"
 					placeholder="Name"

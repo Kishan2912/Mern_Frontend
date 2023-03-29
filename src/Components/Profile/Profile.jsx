@@ -6,8 +6,8 @@ import jwtDecode from 'jwt-decode'
 
 
 import { Link, useNavigate } from 'react-router-dom'
-import Header from './Header'
-import "./Css/profile.css"
+import Header from '../Header/Header'
+import "./profile.css"
 
 const Profile = () => {
 	const navigate = useNavigate()
@@ -17,7 +17,7 @@ const Profile = () => {
 	const [tempEmail, setTempEmail] = useState('')
 
 	async function GetProfile() {
-		const req = await fetch('http://43.205.191.63/api/profile', {
+		const req = await fetch(`http://${process.env.REACT_APP_PORT}/api/profile`, {
 			headers: {
 				'x-access-token': localStorage.getItem('token'),
 			},
@@ -44,6 +44,10 @@ const Profile = () => {
 			} else {
 				GetProfile()
 			}
+		}
+		else{
+			navigate('/login', { replace: true })
+			// alert("Please login fir")
 		}
 	}, [])
 

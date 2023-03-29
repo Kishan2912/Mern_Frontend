@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
-import "./Css/register.css"
+import "./register.css"
 
 function Register() {
 	const navigate = useNavigate()
@@ -12,7 +12,7 @@ function Register() {
 	async function registerUser(event) {
 		event.preventDefault()
 
-		const response = await fetch('http://43.205.191.63/api/register', {
+		const response = await fetch(`http://${process.env.REACT_APP_PORT}/api/register`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
@@ -28,6 +28,9 @@ function Register() {
 
 		if (data.status === 'ok') {
 			navigate('/login')
+		}
+		else{
+			alert(data.error)
 		}
 	}
 

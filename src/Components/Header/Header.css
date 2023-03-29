@@ -2,8 +2,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
-    background-color: #eee;
+    padding: 18px;
+    background-color: #353434;
+    font-size: 1.6rem;
+    font-style: bold;
     /* margin-top: -1rem; */
     /* margin-left: 0rem; */
     /* margin-right: 0rem; */
@@ -11,11 +13,11 @@
   
   .header__left {
     margin-right: auto;
-    color: #007bff;
+    color: #c4c5cd;
     text-decoration: none;
   }
   .header__left:hover{
-    color: #0056b3;
+    color: #84909d;
     text-decoration: underline;
   }
   
@@ -26,12 +28,12 @@
   
   .header__right_link {
     margin-right: 10px;
-    color: #007bff;
+    color: #b987d8;
     text-decoration: none;
   }
   
   .header__right_link:hover {
-    color: #0056b3;
+    color: #bc57be;
     text-decoration: underline;
   }
   
@@ -46,5 +48,9 @@
   .header__right button:hover {
     background-color: #c82333;
     cursor: pointer;
+  }
+
+  .login_header{
+    color: #ad80bf;
   }
   

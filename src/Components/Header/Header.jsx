@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import jwtDecode from 'jwt-decode'
 import { useNavigate, Link } from 'react-router-dom'
-import "./Css/Header.css"
+import "./Header.css"
 
 const Header = () => {
     const navigate = useNavigate()
@@ -26,8 +26,8 @@ const Header = () => {
     // add logout function here
     const logout = () => {
         console.log('logout')
-        const confirm=window.confirm("Are you sure?")
-        if(confirm){
+        const confirm = window.confirm("Are you sure?")
+        if (confirm) {
 
             localStorage.removeItem('token')
             setLoggedIn(false)
@@ -48,7 +48,7 @@ const Header = () => {
                         </> :
                         <>
 
-                            <Link className='header__right_link' to="/login">Login</Link>
+                            <Link className='header__right_link login_header' to="/login">Login</Link>
                             <Link className='header__right_link' to="/register">Register</Link>
                         </>
                     }
