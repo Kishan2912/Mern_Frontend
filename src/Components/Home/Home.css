@@ -14,7 +14,7 @@
     /* border-radius: 5px; */
     margin-top: 1rem;
     background-color: #15565f;
-    padding: 5rem;
+    padding: 10rem;
 
 }
 .full_home{
@@ -27,4 +27,5 @@
 
 .home-header-sub{
     color: #f0ce8a;
+    text-align: center;
 }

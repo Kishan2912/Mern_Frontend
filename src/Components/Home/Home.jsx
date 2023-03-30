@@ -8,11 +8,11 @@ const Home = () => {
             <div className='full_home'>
                 <Header />
                 <div className='home'>
-                    <h1 className="home-header">Authentication System</h1>
-                    <h1 className="home-header-sub">Features :</h1>
-                    <h1 className="home-header-sub">1. Create a new account using email-id</h1>
-                    <h1 className="home-header-sub">2. Login using email-id and paasword</h1>
-                    <h1 className="home-header-sub">3. Edit your profile </h1>
+                    <h1 className="home-header-sub"> Do you want to create</h1>
+                    <h1 className="home-header">Authentication System  ?</h1>
+                    {/* <h1 className="home-header-sub">Features :</h1> */}
+                    <h1 className="home-header-sub"> Let's join us!</h1>
+                    {/* <h1 className="home-header-sub"> Edit your profile </h1> */}
                 </div>
             </div>
         </>
