@@ -9,7 +9,7 @@ const EditProfile = () => {
 	const [tempEmail, setTempEmail] = useState('')
 
 	async function GetProfile() {
-		const req = await fetch(`http://${process.env.REACT_APP_PORT}/api/profile`, {
+		const req = await fetch('http://43.205.191.63/api/profile', {
 			headers: {
 				'x-access-token': localStorage.getItem('token'),
 			},
@@ -45,7 +45,7 @@ const EditProfile = () => {
 
 		console.log(tempName)
 
-		const req = await fetch(`http://${process.env.REACT_APP_PORT}/api/profile`, {
+		const req = await fetch('http://43.205.191.63/api/profile', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',

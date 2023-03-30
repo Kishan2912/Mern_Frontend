@@ -17,7 +17,7 @@ const Profile = () => {
 	const [tempEmail, setTempEmail] = useState('')
 
 	async function GetProfile() {
-		const req = await fetch(`http://${process.env.REACT_APP_PORT}/api/profile`, {
+		const req = await fetch('http://43.205.191.63/api/profile', {
 			headers: {
 				'x-access-token': localStorage.getItem('token'),
 			},
